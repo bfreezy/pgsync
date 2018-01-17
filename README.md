@@ -1,4 +1,4 @@
-# How Does this work?
+# How does this work?
 
 This Dockerfile and docker-compose file will refresh data from a remote Postgres server/db to a local running postgres container.
 

@@ -1,0 +1,26 @@
+GIT
+  remote: https://github.com/arshsingh/pgsync.git
+  revision: 13b061ddd5edc7bc6ba204edc40342aee3bc924e
+  specs:
+    pgsync (0.3.6)
+      multiprocessing
+      parallel
+      pg
+      slop (>= 4.2.0)
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    multiprocessing (0.0.2)
+    parallel (1.12.0)
+    pg (0.21.0)
+    slop (4.5.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  pgsync!
+
+BUNDLED WITH
+   1.15.4

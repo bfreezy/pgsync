@@ -1,0 +1,18 @@
+version: '3'
+services:
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_USER: ""
+      POSTGRES_PASSWORD: ""
+    volumes:
+     - /Users/username/pgdata:/var/lib/postgresql/data
+  pgsync:
+    build: .
+    command: > 
+      /bin/bash -c " 
+        sleep 30;
+        /pgsync/update_db.sh
+      "
+    depends_on:
+      - postgres

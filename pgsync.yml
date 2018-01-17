@@ -1,0 +1,15 @@
+# source database
+# replace 'FROM_DB' variables with actual values from the remote database 
+from: postgres://FROM_DB_USER:FROM_DB_PASS@FROM_DB_HOST/FROM_DB_NAME
+
+# destination database, which is the Postgres Docker container
+to: postgres://pg:password@postgres:5432/pg
+
+
+# allow writes to destination since it's not localhost or 127.0.0.1
+to_safe: true
+
+# exclude tables
+exclude:
+  - ar_internal_metadata
+  - schema_migrations
